@@ -1,9 +1,20 @@
-
-
+import React, { PureComponent } from 'react'
+import { Switch, Route, Link } from 'react-router-dom'
+import { Layout, Typography, Space } from 'antd'
+import Navbar from './components/Navbar';
+import './App.css'
 function App() {
   return (
     <div className="App">
-     <h1>crypto</h1>
+      <div >
+        <Navbar />
+      </div>
+      <div className="main">
+        
+     </div>
+     <div className="footer">
+        
+     </div>
     </div>
   );
 }
