@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Menu, Typography, Avatar } from 'antd';
+import { Button, Menu, Typography, Avatar,Layout, Space } from 'antd';
 import { Link } from 'react-router-dom';
 import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined } from '@ant-design/icons';
 
-import icon from '../images/crypto.png';
+import logo from '../images/crypto.png';
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(true);
   const [screenSize, setScreenSize] = useState(undefined);
+  const [collapsed, setcollapsed] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
@@ -26,15 +27,25 @@ const Navbar = () => {
       setActiveMenu(true);
     }
   }, [screenSize]);
-
+  const { Header, Content, Footer, Sider } = Layout;
+  const { Title } = Typography;
   return (
-    <div className="nav-container">
-      <div className="logo-container">
+    <Sider style={{ minHeight: '100vh' }} collapsible collapsed={collapsed} onCollapse={setcollapsed}>
+    <div >
+      <div >
         
-        <Typography.Title level={2} className="logo"><Link to="/">Cryptoverse</Link></Typography.Title>
-        <Button className="menu-control-container" onClick={() => setActiveMenu(!activeMenu)}><MenuOutlined /></Button>
-      </div>
-      {activeMenu && (
+          <Menu theme="dark"
+          >
+            
+             <Typography.Title level={5} className="logo" ><Avatar src={logo} size="large" /></Typography.Title>
+         </Menu>
+        
+        
+        </div>
+        <br />
+       
+   
+          
       <Menu theme="dark">
         <Menu.Item icon={<HomeOutlined />}>
           <Link to="/">Home</Link>
@@ -49,8 +60,9 @@ const Navbar = () => {
           <Link to="/news">News</Link>
         </Menu.Item>
       </Menu>
-      )}
-    </div>
+      
+      </div>
+      </Sider>
   );
 };
 
