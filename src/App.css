@@ -54,7 +54,23 @@ a:hover {
 }
 
 .logo {
-    margin: 0 0 0 15px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    margin: 16px;
+    background: rgb(0, 21, 41);
+}
+
+.headera-title {
+    height: 32px;
+    margin: 16px;
+    background-color: #001529;
+}
+
+.logo {
+    margin: 0 0 0 10px;
 }
 
 .logo a {
