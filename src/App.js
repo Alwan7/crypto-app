@@ -13,12 +13,14 @@ function App() {
 const { Header, Footer, Sider, Content } = Layout
 
   return (
-    <div className="App">
-      <div >
+    <Layout>
+      
         <Navbar />
-      </div>
-      <div className="main">
-         <Layout>
+      
+      {/* <div className="main"> */}
+        <Layout>
+          <Header>header</Header>
+          <Content>
         <div className='routes'>
 
               <Routes>
@@ -28,11 +30,10 @@ const { Header, Footer, Sider, Content } = Layout
                   <Route path="/crypto/:coinId" element={<CryptoDetails />} />
                   <Route path="/news" element={<News />} />                                   
               </Routes>
-         </div>
-       </Layout>
-        
-     </div>
-     <div className="footer">
+            </div>
+            </Content>
+       
+        <div className="footer">
         <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>Copyright © 2021
           <Link to="/">
             Cryptoverse Inc.
@@ -45,7 +46,9 @@ const { Header, Footer, Sider, Content } = Layout
           <Link to="/news">News</Link>
         </Space>
      </div>
-    </div>
+     {/* </div> */}
+     </Layout>
+    </Layout>
   );
 }
 
