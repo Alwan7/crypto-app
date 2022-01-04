@@ -23,11 +23,12 @@ const Cryptocurrencies = ({simplified}) => {
   return (
     <>
       {!simplified && (
-    <div className='search-crypto'>
+    <div >
             <Input placeholder='Search Crypto' onChange={(e) => setSearch(e.target.value)} />
 
           </div>
       )}
+      <br />
       
       <Row gutter={[32, 32]} className="crypto-card-container">
         {cryptos?.map((currency) => (
