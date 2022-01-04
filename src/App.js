@@ -16,8 +16,7 @@ const { Header, Footer, Sider, Content } = Layout
     <Layout>
       
         <Navbar />
-      
-      {/* <div className="main"> */}
+       {/* <div className="main"> */}
         <Layout>
           <Header>header</Header>
           <Content>
