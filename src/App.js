@@ -18,7 +18,7 @@ const { Header, Footer, Sider, Content } = Layout
         <Navbar />
        {/* <div className="main"> */}
         <Layout>
-          <Header>header</Header>
+          <Header></Header>
           <Content>
         <div className='routes'>
 
@@ -34,7 +34,7 @@ const { Header, Footer, Sider, Content } = Layout
        
         <div className="footer">
         <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>Copyright © 2022
-          <Link to="/">
+          <Link to="/"><br/>
             Cryptosy.
           </Link> <br />
           All Rights Reserved.
