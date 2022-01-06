@@ -9,6 +9,7 @@ import Homepage from './components/Homepage';
 import './App.css'
 
 
+
 function App() {
 const { Header, Footer, Sider, Content } = Layout
 
@@ -33,7 +34,7 @@ const { Header, Footer, Sider, Content } = Layout
             </Content>
        
         <div className="footer">
-        <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>Copyright © 2022
+        <Typography.Title   level={5} style={{ color: 'white', textAlign: 'center' }}>Copyright © 2022
           <Link to="/"><br/>
             Cryptosy.
           </Link> <br />

@@ -47,7 +47,8 @@ coinTimestamp.push(moment.unix(coinHistory?.data?.history[i].timestamp).format('
   };
 
   const options = {
-    scales: {
+    responsive: true,
+    legend: {
       yAxes: [
         {
           ticks: {
