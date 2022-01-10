@@ -325,8 +325,12 @@ a:hover {
     height: 100px;
 }
 
+.news-description {
+    color: floralwhite
+}
+
 .news-card p {
-    color: black;
+    color: floralwhite;
     margin: 10px 0px !important;
 }
 

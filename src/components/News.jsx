@@ -40,7 +40,7 @@ const News = ({ simplified }) => {
                 <Typography.Title className="news-title" level={4}>{news.name}</Typography.Title>
                 <img src={news?.image?.thumbnail?.contentUrl } alt="" />
               </div>
-              <p>{news.description.length > 100 ? `${news.description.substring(0, 100)}...` : news.description}</p>
+              <p className="news-description">{news.description.length > 100 ? `${news.description.substring(0, 100)}...` : news.description}</p>
               <div className="provider-container">
                 <div>
                   <Avatar src={news.provider[0]?.image?.thumbnail?.contentUrl } alt="" />
