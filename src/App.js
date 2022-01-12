@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import { BrowserRouter as Router,Routes, Route, Link } from "react-router-dom";
-import { Layout, Typography, Space, Divider } from 'antd';
+import { Layout, Typography, Space, Divider, BackTop } from 'antd';
 import Navbar from './components/Navbar';
 import Cryptocurrencies from './components/Cryptocurrencies';
 import CryptoDetails from './components/CryptoDetails ';
@@ -15,6 +15,8 @@ const { Header, Footer, Sider, Content } = Layout
 
   return (
     <Layout>
+      <BackTop />
+
       
         <Navbar />
        {/* <div className="main"> */}
